@@ -1,1 +1,28 @@
+.wrapper {
+  border: rgb(160, 160, 160) solid 1px;
+  border-radius: 20px;
+  display: block;
+  margin: 75px auto;
+  padding: 20px;
+}
 
+h1 {
+  color: rgb(131, 131, 132);
+}
+h2 {
+  color: rgb(131, 131, 132);
+  margin-bottom: 50px;
+}
+li {
+  list-style: none;
+  color: rgb(131, 131, 132);
+  font-size: 16px;
+}
+.temperature {
+  font-size: 35px;
+}
+.CF {
+  position: relative;
+  top: -10px;
+  left: 10px;
+}
