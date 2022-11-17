@@ -4,6 +4,7 @@
   display: block;
   margin: 75px auto;
   padding: 20px;
+  max-width: 600px;
 }
 
 h1 {
@@ -25,4 +26,10 @@ li {
   position: relative;
   top: -10px;
   left: 10px;
+}
+.signature {
+  position: relative;
+  top: -45px;
+  font-family: monospace;
+  text-align: center;
 }
