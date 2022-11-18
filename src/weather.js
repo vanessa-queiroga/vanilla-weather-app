@@ -33,6 +33,7 @@ function formatTemperature(temperature) {
   let humidityData = temperature.data.main.humidity;
   let wind = Math.round(temperature.data.wind.speed);
   let date = temperature.data.dt * 1000;
+  let icon = temperature.data.weather[0].icon;
 
   let cityName = document.querySelector("#city-name");
   let countryName = document.querySelector("#country");
@@ -42,6 +43,7 @@ function formatTemperature(temperature) {
   let windSpeed = document.querySelector("#wind-speed");
   let weatherDescription = document.querySelector("#description");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   weatherNumber.innerHTML = `${weather}°`;
   maxTemp.innerHTML = ` ${maxTemperature}° C`;
@@ -51,9 +53,14 @@ function formatTemperature(temperature) {
   countryName.innerHTML = `, ${country}`;
   weatherDescription.innerHTML = description;
   dateElement.innerHTML = formatDate(date);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", description);
 }
 
-let city = "Tokyo";
+let city = "sydney";
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(formatTemperature);
