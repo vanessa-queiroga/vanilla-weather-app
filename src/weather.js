@@ -1,4 +1,30 @@
+function formatDate(time) {
+  let now = new Date(time);
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let dates = now.getDate();
+  let days = now.getDay();
+  let weekDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return `${weekDay[days]}, ${dates}th , ${hours}:${minutes}`;
+}
+
 function formatTemperature(temperature) {
+  console.log(temperature);
   let weather = Math.round(temperature.data.main.temp);
   let country = temperature.data.sys.country;
   let cityData = temperature.data.name;
@@ -6,6 +32,7 @@ function formatTemperature(temperature) {
   let maxTemperature = Math.round(temperature.data.main.temp_max);
   let humidityData = temperature.data.main.humidity;
   let wind = Math.round(temperature.data.wind.speed);
+  let date = temperature.data.dt * 1000;
 
   let cityName = document.querySelector("#city-name");
   let countryName = document.querySelector("#country");
@@ -14,6 +41,7 @@ function formatTemperature(temperature) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let weatherDescription = document.querySelector("#description");
+  let dateElement = document.querySelector("#date");
 
   weatherNumber.innerHTML = `${weather}°`;
   maxTemp.innerHTML = ` ${maxTemperature}° C`;
@@ -22,6 +50,7 @@ function formatTemperature(temperature) {
   cityName.innerHTML = cityData;
   countryName.innerHTML = `, ${country}`;
   weatherDescription.innerHTML = description;
+  dateElement.innerHTML = formatDate(date);
 }
 
 let city = "Tokyo";
