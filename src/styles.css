@@ -1,4 +1,27 @@
+body {
+  background: #5c135a;
+  background: -webkit-linear-gradient(top left, #5c135a, #030166);
+  background: -moz-linear-gradient(top left, #5c135a, #030166);
+  background: linear-gradient(to bottom right, #5c135a, #030166);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .wrapper {
+  background: linear-gradient(
+    113.3deg,
+    rgb(0, 98, 186) -6%,
+    rgb(88, 40, 178) 10.2%,
+    rgb(234, 39, 119) 34.3%,
+    rgb(255, 80, 152) 54%,
+    rgb(255, 101, 74) 62.5%,
+    rgb(254, 166, 34) 77.2%,
+    rgb(255, 227, 99) 91.2%,
+    rgb(58, 243, 156) 112%,
+    rgb(58, 243, 156) 118.1%
+  );
   border: rgb(160, 160, 160) solid 1px;
   border-radius: 20px;
   display: block;
@@ -8,24 +31,24 @@
 }
 
 .main-city {
-  color: rgb(131, 131, 132);
+  color: rgb(251, 251, 255);
   display: inline;
   font-size: 35.44px;
 }
 h2 {
-  color: rgb(131, 131, 132);
+  color: rgb(255, 255, 255);
   margin-bottom: 50px;
   font-size: 15px;
 }
 .country-des {
   font-size: 35.44px;
-  color: rgb(131, 131, 132);
+  color: rgb(255, 255, 255);
 }
 .weather-description {
   font-size: 20px;
   position: relative;
   top: -30px;
-  color: rgb(131, 131, 132);
+  color: rgb(255, 255, 255);
 }
 
 .weather-description:first-letter {
@@ -33,7 +56,7 @@ h2 {
 }
 li {
   list-style: none;
-  color: rgb(131, 131, 132);
+  color: rgb(255, 255, 255);
   font-size: 16px;
 }
 .temperature {
@@ -49,4 +72,5 @@ li {
   top: -45px;
   font-family: monospace;
   text-align: center;
+  color: beige;
 }
