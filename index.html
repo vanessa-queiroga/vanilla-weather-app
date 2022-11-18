@@ -23,6 +23,24 @@
   <body>
     <div class="container">
       <div class="wrapper">
+        <form id="search-form">
+          <div class="row">
+            <div class="col">
+              <input
+                type="search"
+                placeholder="Type name of a city..."
+                class="form-control"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-50"
+              />
+            </div>
+          </div>
+        </form>
         <div class="main-weather-wrap">
           <div class="main-city" id="city-name"></div>
           <span class="country-des" id="country"></span>
