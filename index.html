@@ -23,8 +23,12 @@
   <body>
     <div class="container">
       <div class="wrapper">
-        <h1>London, GB</h1>
-        <h2>Friday, 17th 15:30</h2>
+        <div class="main-weather-wrap">
+          <div class="main-city" id="city-name">London</div>
+          <span class="country-des" id="country"> test</span>
+          <h2>Friday, 17th 15:30</h2>
+          <div class="weather-description" id="description">Clear Skies</div>
+        </div>
         <div class="row">
           <div class="col">
             <span
@@ -33,13 +37,14 @@
                 width="80px"
                 alt="cloud"
             /></span>
-            <span class="temperature">25°</span> <span class="CF">C | F</span>
+            <span class="temperature" id="temp-number">25°</span>
+            <span class="CF">C | F</span>
           </div>
           <div class="col">
             <ul>
-              <li>Precipitation:40%</li>
-              <li>Humidity: 75%</li>
-              <li>Wind: 2 mph</li>
+              <li>Max Temperature:<span id="max-temp"></span></li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind-speed"></span> Km/h</li>
             </ul>
           </div>
         </div>
