@@ -8,14 +8,12 @@ body {
 }
 
 .wrapper {
+  background: rgb(0, 0, 0);
   background: radial-gradient(
-    circle at 48.7% 44.3%,
-    rgb(30, 144, 231) 0%,
-    rgb(56, 113, 209) 22.9%,
-    rgb(38, 76, 140) 76.7%,
-    rgb(31, 63, 116) 100.2%
+    circle,
+    rgba(0, 0, 0, 1) 41%,
+    rgba(4, 100, 168, 1) 83%
   );
-
   border: rgb(0, 0, 0) solid 1.5px;
   border-radius: 20px;
   display: block;
@@ -78,11 +76,14 @@ li {
   color: rgb(255, 255, 255);
 }
 .signature {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   position: relative;
   top: -45px;
   font-family: monospace;
   text-align: center;
-  color: beige;
+  color: rgb(246, 5, 138);
+  background-color: black;
 }
 .celcius-link {
   color: rgb(255, 255, 255);
