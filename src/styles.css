@@ -1,5 +1,6 @@
 body {
-  background-image: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-image: url(https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+
   background-size: cover;
   height: 100%;
   margin: 0;
@@ -8,14 +9,13 @@ body {
 }
 
 .wrapper {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1) 41%,
-    rgba(4, 100, 168, 1) 83%
-  );
-  border: rgb(0, 0, 0) solid 1.5px;
-  border-radius: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: block;
   margin: 75px auto;
   padding: 20px;
@@ -80,10 +80,8 @@ li {
   font-family: "Kanit", sans-serif;
   position: relative;
   top: -45px;
-  font-family: monospace;
   text-align: center;
-  color: rgb(246, 5, 138);
-  background-color: black;
+  color: rgb(255, 255, 255);
 }
 .celcius-link {
   color: rgb(255, 255, 255);
