@@ -25,7 +25,9 @@ function formatDate(time) {
 
 function formatTemperature(temperature) {
   console.log(temperature);
-  let weather = Math.round(temperature.data.main.temp);
+
+  celciusTemp = Math.round(temperature.data.main.temp);
+  let weather = celciusTemp;
   let country = temperature.data.sys.country;
   let cityData = temperature.data.name;
   let description = temperature.data.weather[0].description;
@@ -73,10 +75,21 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
 
 function searchCityPage() {
-  let mainCity = "Sydney";
+  let mainCity = "london";
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${mainCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(formatTemperature);
 }
 
+function displayFTemp(event) {
+  event.preventDefault();
+  let fTemperature = Math.round((celciusTemp * 9) / 5 + 32);
+  let tempNumber = document.querySelector("#temp-number");
+  tempNumber.innerHTML = `${fTemperature}°`;
+}
+
+let fTempLink = document.querySelector("#f-temp");
+fTempLink.addEventListener("click", displayFTemp);
+
+let celciusTemp = null;
 searchCityPage();
