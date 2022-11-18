@@ -26,6 +26,10 @@ h2 {
   top: -30px;
   color: rgb(131, 131, 132);
 }
+
+.weather-description:first-letter {
+  text-transform: capitalize;
+}
 li {
   list-style: none;
   color: rgb(131, 131, 132);
