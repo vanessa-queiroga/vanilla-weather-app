@@ -1,8 +1,6 @@
 body {
-  background: #5c135a;
-  background: -webkit-linear-gradient(top left, #5c135a, #030166);
-  background: -moz-linear-gradient(top left, #5c135a, #030166);
-  background: linear-gradient(to bottom right, #5c135a, #030166);
+  background-image: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -10,19 +8,15 @@ body {
 }
 
 .wrapper {
-  background: linear-gradient(
-    113.3deg,
-    rgb(0, 98, 186) -6%,
-    rgb(88, 40, 178) 10.2%,
-    rgb(234, 39, 119) 34.3%,
-    rgb(255, 80, 152) 54%,
-    rgb(255, 101, 74) 62.5%,
-    rgb(254, 166, 34) 77.2%,
-    rgb(255, 227, 99) 91.2%,
-    rgb(58, 243, 156) 112%,
-    rgb(58, 243, 156) 118.1%
+  background: radial-gradient(
+    circle at 48.7% 44.3%,
+    rgb(30, 144, 231) 0%,
+    rgb(56, 113, 209) 22.9%,
+    rgb(38, 76, 140) 76.7%,
+    rgb(31, 63, 116) 100.2%
   );
-  border: rgb(160, 160, 160) solid 1px;
+
+  border: rgb(0, 0, 0) solid 1.5px;
   border-radius: 20px;
   display: block;
   margin: 75px auto;
@@ -31,20 +25,28 @@ body {
 }
 
 .main-city {
-  color: rgb(251, 251, 255);
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
+  color: rgb(255, 255, 255);
   display: inline;
   font-size: 35.44px;
 }
 h2 {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   color: rgb(255, 255, 255);
   margin-bottom: 50px;
   font-size: 15px;
 }
 .country-des {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   font-size: 35.44px;
   color: rgb(255, 255, 255);
 }
 .weather-description {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   font-size: 20px;
   position: relative;
   top: -30px;
@@ -55,17 +57,25 @@ h2 {
   text-transform: capitalize;
 }
 li {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   list-style: none;
   color: rgb(255, 255, 255);
   font-size: 16px;
 }
 .temperature {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   font-size: 35px;
+  color: rgb(255, 255, 255);
 }
 .CF {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Kanit", sans-serif;
   position: relative;
   top: -10px;
   left: 10px;
+  color: rgb(255, 255, 255);
 }
 .signature {
   position: relative;
@@ -73,4 +83,7 @@ li {
   font-family: monospace;
   text-align: center;
   color: beige;
+}
+.celcius-link {
+  color: rgb(255, 255, 255);
 }
