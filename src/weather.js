@@ -48,7 +48,17 @@ function displayForecast() {
   forecastElement.innerHTML = weekForecastHTML;
 }
 
+function sendForecast(coordinates) {
+  let lon = coordinates.lon;
+  let lat = coordinates.lat;
+
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function formatTemperature(temperature) {
+  console.log(temperature);
   celciusTemp = Math.round(temperature.data.main.temp);
   let weather = celciusTemp;
   let country = temperature.data.sys.country;
@@ -83,6 +93,8 @@ function formatTemperature(temperature) {
     `http://openweathermap.org/img/wn/${icon}@2x.png`
   );
   iconElement.setAttribute("alt", description);
+
+  sendForecast(temperature.data.coord);
 }
 
 function searchWeather(event) {
@@ -129,4 +141,3 @@ celciusNumber.addEventListener("click", displayCTemp);
 
 let celciusTemp = null;
 searchCityPage();
-displayForecast();
