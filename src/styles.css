@@ -64,12 +64,13 @@ li {
 .temperature {
   font-family: "Abril Fatface", cursive;
   font-family: "Kanit", sans-serif;
-  font-size: 35px;
+  font-size: 45px;
   color: rgb(255, 255, 255);
 }
 .CF {
   font-family: "Abril Fatface", cursive;
   font-family: "Kanit", sans-serif;
+  font-size: 17px;
   position: relative;
   top: -10px;
   left: 10px;
@@ -95,8 +96,11 @@ li {
   margin-top: 20px;
 }
 .weather-forecast-day {
-  opacity: 0.6;
+  color: rgb(255, 255, 255);
 }
 .weather-min {
   opacity: 0.6;
+}
+a {
+  color: rgb(5, 208, 35);
 }
