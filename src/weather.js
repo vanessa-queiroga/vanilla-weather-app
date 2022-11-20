@@ -23,6 +23,31 @@ function formatDate(time) {
   return `${weekDay[days]}, ${dates}th , ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#week-forecast");
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+
+  let weekForecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    weekForecastHTML =
+      weekForecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-day">${day}</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/thunderstorms.png"
+                alt=""
+              />
+              <div class="weather-forecast-temp">
+                <span class="weather-min">12°</span>
+                <span class="weather-max">18°</span>
+              </div>
+            </div>`;
+  });
+
+  weekForecastHTML = weekForecastHTML + `</div>`;
+  forecastElement.innerHTML = weekForecastHTML;
+}
+
 function formatTemperature(temperature) {
   celciusTemp = Math.round(temperature.data.main.temp);
   let weather = celciusTemp;
@@ -104,3 +129,4 @@ celciusNumber.addEventListener("click", displayCTemp);
 
 let celciusTemp = null;
 searchCityPage();
+displayForecast();

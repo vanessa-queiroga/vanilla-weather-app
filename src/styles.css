@@ -92,6 +92,7 @@ li {
 .weather-forecast {
   text-align: center;
   color: white;
+  margin-top: 20px;
 }
 .weather-forecast-day {
   opacity: 0.6;
