@@ -89,3 +89,13 @@ li {
   text-align: center;
   color: rgb(255, 255, 255);
 }
+.weather-forecast {
+  text-align: center;
+  color: white;
+}
+.weather-forecast-day {
+  opacity: 0.6;
+}
+.weather-min {
+  opacity: 0.6;
+}
