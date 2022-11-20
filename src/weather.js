@@ -24,8 +24,6 @@ function formatDate(time) {
 }
 
 function formatTemperature(temperature) {
-  console.log(temperature);
-
   celciusTemp = Math.round(temperature.data.main.temp);
   let weather = celciusTemp;
   let country = temperature.data.sys.country;
@@ -90,6 +88,14 @@ function displayFTemp(event) {
 
 let fTempLink = document.querySelector("#f-temp");
 fTempLink.addEventListener("click", displayFTemp);
+
+function displayCTemp() {
+  let mainTemp = document.querySelector("#temp-number");
+  mainTemp.innerHTML = `${celciusTemp}°`;
+}
+
+let celciusNumber = document.querySelector("#c-temp");
+celciusNumber.addEventListener("click", displayCTemp);
 
 let celciusTemp = null;
 searchCityPage();
