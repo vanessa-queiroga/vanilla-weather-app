@@ -81,6 +81,9 @@ function searchCityPage() {
 
 function displayFTemp(event) {
   event.preventDefault();
+  celciusNumber.classList.remove("active");
+  fTempLink.classList.add("active");
+
   let fTemperature = Math.round((celciusTemp * 9) / 5 + 32);
   let tempNumber = document.querySelector("#temp-number");
   tempNumber.innerHTML = `${fTemperature}°`;
@@ -90,6 +93,8 @@ let fTempLink = document.querySelector("#f-temp");
 fTempLink.addEventListener("click", displayFTemp);
 
 function displayCTemp() {
+  celciusNumber.classList.add("active");
+  fTempLink.classList.remove("active");
   let mainTemp = document.querySelector("#temp-number");
   mainTemp.innerHTML = `${celciusTemp}°`;
 }

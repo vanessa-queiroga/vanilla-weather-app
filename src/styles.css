@@ -75,6 +75,12 @@ li {
   left: 10px;
   color: rgb(255, 255, 255);
 }
+
+.CF .active {
+  color: rgb(255, 255, 255);
+  cursor: default;
+  text-decoration: none;
+}
 .signature {
   font-family: "Abril Fatface", cursive;
   font-family: "Kanit", sans-serif;
