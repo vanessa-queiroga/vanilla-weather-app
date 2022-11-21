@@ -118,6 +118,8 @@ function formatTemperature(temperature) {
 
 function searchWeather(event) {
   event.preventDefault();
+  celciusNumber.classList.add("active");
+  fTempLink.classList.remove("active");
   let cityElement = document.querySelector("#city-value");
   let cityElementValue = cityElement.value;
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
@@ -135,8 +137,7 @@ function searchCityPage() {
   axios.get(apiUrl).then(formatTemperature);
 }
 
-function displayFTemp(event) {
-  event.preventDefault();
+function displayFTemp() {
   celciusNumber.classList.remove("active");
   fTempLink.classList.add("active");
 
